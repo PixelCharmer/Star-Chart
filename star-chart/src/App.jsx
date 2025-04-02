@@ -114,7 +114,7 @@ function App() {
                     <button onClick={handleReset}>Reset</button>
                 </div>
 
-                {isSolved && <div className="success">Coordinates to Earth: 38.79 N 106.53</div>}
+                {isSolved && <div className="success">Coordinates to Earth: 38.79N 106.53W</div>}
                 {error && <div className="error">Try Again!</div>}
             </div>
         </DndProvider>

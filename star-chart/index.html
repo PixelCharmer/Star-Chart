@@ -1,25 +1,55 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Room 2 - Star Chart</title>
-  </head>
-  <body>
-      <div id="root"></div>
-      <section>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-      </section>
-      <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        #root,
+        section {
+            flex: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            margin-top: 15px;
+            color: #f5e6ee;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <section>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </section>
+
+    <footer>
+        <p>Created & Coded by Kari Alcoset</p>
+    </footer>
+
+    <script type="module" src="/src/main.jsx"></script>
+</body>
 </html>

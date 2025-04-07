@@ -22,6 +22,7 @@ section {
     background: url("https://i.postimg.cc/c1Q3njM0/bg2.jpg");
     background-size: cover;
     animation: animateBg 50s linear infinite;
+    overflow: auto;
 }
 
 @keyframes animateBg {
@@ -44,6 +45,7 @@ span {
     border-radius: 50%;
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.1);
     animation: animate 3s linear infinite;
+    overflow: auto;
 }
 
     span::before {
@@ -54,6 +56,7 @@ span {
         width: 300px;
         height: 1px;
         background: linear-gradient(90deg, #fff, transparent);
+        overflow: auto;
     }
 
 @keyframes animate {
@@ -168,6 +171,7 @@ span:nth-child(10) {
     width: 100%;
     position: relative;
     z-index: 1;
+    overflow: auto;
 }
 
 /* Available images and solution box should be side by side */

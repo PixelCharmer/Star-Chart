@@ -156,7 +156,9 @@ span:nth-child(10) {
 
 /* Main container */
 .container {
-    display: center;
+    margin-top: 80px;
+    padding-top: 90px;
+    display: flex; /* was: center */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -166,19 +168,20 @@ span:nth-child(10) {
     background-color: black;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    width: 100%;
+    width: fit-content; /* changed from width: 100% */
+    max-width: 100%; /* prevents overflow */
     height: auto;
     position: relative;
     z-index: 1;
 }
 
+
 /* Available images and solution box should be side by side */
 .available-images,
 .solution-box {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     gap: 15px;
     margin: 20px 0;
 }
@@ -186,16 +189,17 @@ span:nth-child(10) {
 /* Draggable images style */
 .draggable {
     cursor: move;
-    border: 1px solid #ddd;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 1px;
+    padding: 0; /* Remove extra space if you want the image flush */
+    background-color: transparent; /* Optional: to fully blend */
+    border: none;
+    border-radius: 0;
     transition: all 0.3s ease;
 }
 
     .draggable img {
-        max-width: 230px;
-        max-height: 230px;
+        width: 230px;
+        height: 270px;
+        object-fit: cover; /* ensures it doesn't stretch */
     }
 
     .draggable.dragging {
@@ -205,13 +209,14 @@ span:nth-child(10) {
 /* Drop zone */
 .drop-zone {
     border: 2px dashed #aaa;
-    padding: 20px;
-    min-width: 200px;
-    min-height: 200px;
+    width: 1350px; /* Match image width */
+    height: 270px; /* Match image height */
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
+    overflow: hidden; /* Prevent size changes */
+    background-color: #000; /* Optional: background for visibility */
 }
 
     .drop-zone.over {

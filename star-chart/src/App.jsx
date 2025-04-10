@@ -93,7 +93,7 @@ function App() {
     return (
         <DndProvider backend={HTML5Backend}>
             <div className="container">
-                <h2>Star Chart Puzzle</h2>
+                <h2>Star Timeline</h2>
 
                 <div className="available-images">
                     {availableImages.map((src) => (
@@ -114,8 +114,8 @@ function App() {
                     <button onClick={handleReset}>Reset</button>
                 </div>
 
-                {isSolved && <div className="success">Coordinates to Earth: 38.79N 106.53W</div>}
-                {error && <div className="error">Try Again!</div>}
+                {isSolved && <div className="success">Coordinates to Earth: 72.8N 379.4E</div>}
+                {error && <div className="error">Navigation Home Not Likely</div>}
             </div>
         </DndProvider>
     );

@@ -11,13 +11,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: auto; /* Allow scrolling */
+    overflow: hidden; /* Allow scrolling */
     background-color: #111; /* Optional: to enhance contrast on mobile */
 }
 
 /* Main container */
 .container {
-    margin-top: 20vh;
+    margin-top: 5vh;
     margin-left: 2%;
     padding-top: 5vh;
     display: flex;
@@ -32,7 +32,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 1400px;
-    height: auto;
     position: relative;
     z-index: 1;
 }
@@ -62,7 +61,7 @@ body {
 
     .draggable img {
         width: 100%;
-        height: auto;
+        height: 270px;
         aspect-ratio: 230 / 270;
         object-fit: cover;
     }
@@ -75,7 +74,7 @@ body {
 .drop-zone {
     border: 2px dashed #aaa;
     width: 100%;
-    max-width: 1350px;
+    max-width: 1550px;
     aspect-ratio: 5 / 1;
     display: flex;
     align-items: center;
